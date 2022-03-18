@@ -1,0 +1,121 @@
+{
+	"name": "Folha de eventos 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 656763710374195,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "is-within-angle",
+					"objectClass": "Sprite4",
+					"sid": 597583753828977,
+					"parameters": {
+						"within": "90",
+						"angle": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sprite4",
+					"sid": 292169593937819,
+					"parameters": {
+						"animation": "\"atack_down\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Sprite4",
+					"sid": 943400252850924,
+					"parameters": {
+						"object": "Sprite5",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 800305607999035
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-released",
+					"objectClass": "Teclado",
+					"sid": 417481487299936,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sprite4",
+					"sid": 656647026003399,
+					"parameters": {
+						"animation": "\"stand_down\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 266976915595296
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 316025138129894,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "is-within-angle",
+					"objectClass": "Sprite4",
+					"sid": 198070031325363,
+					"parameters": {
+						"within": "90",
+						"angle": "90"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sprite4",
+					"sid": 440629859179029,
+					"parameters": {
+						"animation": "\"stand_right\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Sprite4",
+					"sid": 888745411038275,
+					"parameters": {
+						"object": "Sprite5",
+						"layer": "1",
+						"image-point": "2",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 285233627753005
+		}
+	],
+	"sid": 588866257436957
+}
