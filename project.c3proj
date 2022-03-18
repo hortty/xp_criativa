@@ -17,7 +17,7 @@
 		{
 			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Teclado",
+			"name": "Keyboard",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -32,8 +32,16 @@
 		},
 		{
 			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "bound",
-			"name": "Restrito ao layout",
+			"name": "Bound to layout",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -41,23 +49,15 @@
 		{
 			"type": "behavior",
 			"id": "EightDir",
-			"name": "8 Direções",
+			"name": "8 Direction",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "destroy",
-			"name": "Destruir fora do layout",
-			"author": "Scirra",
-			"version": "r285.3",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "NoSave",
-			"name": "Não salvar",
+			"id": "scrollto",
+			"name": "Scroll To",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -65,7 +65,23 @@
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Projétil",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "NoSave",
+			"name": "No save",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -77,12 +93,21 @@
 			"Sprite",
 			"Sprite2",
 			"Sprite3",
-			"Sprite4",
+			"char_00",
 			"Teclado",
 			"Mouse",
 			"Sprite5"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"collision_01",
+					"entrance_00"
+				],
+				"subfolders": [],
+				"name": "collisions"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],

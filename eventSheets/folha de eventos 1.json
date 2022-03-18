@@ -2,119 +2,367 @@
 	"name": "Folha de eventos 1",
 	"events": [
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "moviment - walk",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Teclado",
-					"sid": 656763710374195,
-					"parameters": {
-						"key": 32
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "char_00",
+							"sid": 283883555097757,
+							"behaviorType": "8Direções"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-speed",
+							"objectClass": "char_00",
+							"sid": 554441028520214,
+							"parameters": {
+								"speed": "15"
+							}
+						}
+					],
+					"sid": 572126971572704
 				},
 				{
-					"id": "is-within-angle",
-					"objectClass": "Sprite4",
-					"sid": 597583753828977,
-					"parameters": {
-						"within": "90",
-						"angle": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Sprite4",
-					"sid": 292169593937819,
-					"parameters": {
-						"animation": "\"atack_down\"",
-						"from": "beginning"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 341312960722416
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-speed",
+							"objectClass": "char_00",
+							"sid": 940726889255915,
+							"parameters": {
+								"speed": "0"
+							}
+						}
+					],
+					"sid": 842397989180071,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "char_00",
+									"sid": 125344286526601,
+									"parameters": {
+										"comparison": 1,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "char_00",
+									"sid": 703278364806651,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 972846601276010
+						}
+					]
 				},
 				{
-					"id": "spawn-another-object",
-					"objectClass": "Sprite4",
-					"sid": 943400252850924,
-					"parameters": {
-						"object": "Sprite5",
-						"layer": "1",
-						"image-point": "0",
-						"create-hierarchy": false
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 713011123978281,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "char_00",
+							"sid": 623136632957810,
+							"behaviorType": "8Direções",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "char_00",
+							"sid": 905475906230915,
+							"parameters": {
+								"instance-variable": "directions",
+								"value": "\"walk_right\""
+							}
+						}
+					],
+					"sid": 181800615715704
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 618824229891933,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "char_00",
+							"sid": 804918705638733,
+							"behaviorType": "8Direções",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "char_00",
+							"sid": 374800089967517,
+							"parameters": {
+								"instance-variable": "directions",
+								"value": "\"walk_left\""
+							}
+						}
+					],
+					"sid": 586331887362793
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 859137426110368,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "char_00",
+							"sid": 144250449261863,
+							"behaviorType": "8Direções",
+							"parameters": {
+								"control": "up"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "char_00",
+							"sid": 267378989987526,
+							"parameters": {
+								"instance-variable": "directions",
+								"value": "\"walk_up\""
+							}
+						}
+					],
+					"sid": 874534020224460
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 648251765454936,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "char_00",
+							"sid": 853042874975437,
+							"behaviorType": "8Direções",
+							"parameters": {
+								"control": "down"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "char_00",
+							"sid": 111412793184812,
+							"parameters": {
+								"instance-variable": "directions",
+								"value": "\"walk_down\""
+							}
+						}
+					],
+					"sid": 372859113416139
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 591401797365604
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "char_00",
+							"sid": 377250524458489,
+							"parameters": {
+								"animation": "char_00.directions",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 351174975277758
 				}
 			],
-			"sid": 800305607999035
+			"sid": 799078266315473
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "atack",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-key-released",
-					"objectClass": "Teclado",
-					"sid": 417481487299936,
-					"parameters": {
-						"key": 32
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Sprite4",
-					"sid": 656647026003399,
-					"parameters": {
-						"animation": "\"stand_down\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 266976915595296
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Teclado",
-					"sid": 316025138129894,
-					"parameters": {
-						"key": 32
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 994900812245303,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "is-within-angle",
+							"objectClass": "char_00",
+							"sid": 299363815457672,
+							"parameters": {
+								"within": "90",
+								"angle": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "char_00",
+							"sid": 690429189044048,
+							"parameters": {
+								"animation": "\"atack_down\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "char_00",
+							"sid": 668438699826354,
+							"parameters": {
+								"object": "Sprite5",
+								"layer": "1",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 139251829329014
 				},
 				{
-					"id": "is-within-angle",
-					"objectClass": "Sprite4",
-					"sid": 198070031325363,
-					"parameters": {
-						"within": "90",
-						"angle": "90"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Sprite4",
-					"sid": 440629859179029,
-					"parameters": {
-						"animation": "\"stand_right\"",
-						"from": "beginning"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Teclado",
+							"sid": 617511202527635,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "char_00",
+							"sid": 249075141433801,
+							"parameters": {
+								"animation": "\"stand_down\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 958890612328370
 				},
 				{
-					"id": "spawn-another-object",
-					"objectClass": "Sprite4",
-					"sid": 888745411038275,
-					"parameters": {
-						"object": "Sprite5",
-						"layer": "1",
-						"image-point": "2",
-						"create-hierarchy": false
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 533472298286519,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "is-within-angle",
+							"objectClass": "char_00",
+							"sid": 612634092334005,
+							"parameters": {
+								"within": "90",
+								"angle": "90"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "char_00",
+							"sid": 609175982604101,
+							"parameters": {
+								"animation": "\"stand_right\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "char_00",
+							"sid": 945653282627485,
+							"parameters": {
+								"object": "Sprite5",
+								"layer": "1",
+								"image-point": "2",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 372762881716003
 				}
 			],
-			"sid": 285233627753005
+			"sid": 692152424034006
 		}
 	],
 	"sid": 588866257436957

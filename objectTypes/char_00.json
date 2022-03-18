@@ -1,9 +1,22 @@
 {
-	"name": "Sprite4",
+	"name": "char_00",
 	"plugin-id": "Sprite",
 	"sid": 175744452259585,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "directions",
+			"type": "string",
+			"desc": "",
+			"sid": 277892517940051
+		},
+		{
+			"name": "speed",
+			"type": "number",
+			"desc": "",
+			"sid": 750236702455326
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "bound",
@@ -14,6 +27,11 @@
 			"behaviorId": "EightDir",
 			"name": "8Direções",
 			"sid": 497662553650345
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 436244482641197
 		}
 	],
 	"effectTypes": [],

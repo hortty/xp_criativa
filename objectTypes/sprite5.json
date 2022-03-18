@@ -6,19 +6,19 @@
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "destroy",
-			"name": "DestruirForaDoLayout",
-			"sid": 320177951134915
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 382952857198178
 		},
 		{
 			"behaviorId": "NoSave",
-			"name": "NãoSalvar",
-			"sid": 233219844726746
+			"name": "NoSave",
+			"sid": 898379093366660
 		},
 		{
-			"behaviorId": "Bullet",
-			"name": "Projétil",
-			"sid": 511284003070164
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 488116570078492
 		}
 	],
 	"effectTypes": [],
