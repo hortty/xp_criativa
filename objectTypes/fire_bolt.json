@@ -1,0 +1,159 @@
+{
+	"name": "fire_bolt",
+	"plugin-id": "Sprite",
+	"sid": 367235664977879,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 382952857198178
+		},
+		{
+			"behaviorId": "NoSave",
+			"name": "NoSave",
+			"sid": 898379093366660
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 488116570078492
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5270706,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.25,
+								0.5,
+								0.25,
+								0.71875,
+								0.25,
+								0.84375,
+								0.5,
+								0.71875,
+								0.71875,
+								0.5,
+								0.78125,
+								0.25,
+								0.71875,
+								0.125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 220730383467132,
+				"name": "fire_bolt",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 30
+			},
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 504586,
+						"collisionPoly": {
+							"points": [
+								0.25,
+								0.25,
+								0.5,
+								0.1875,
+								0.71875,
+								0.25,
+								0.84375,
+								0.5,
+								0.78125,
+								0.78125,
+								0.5,
+								0.84375,
+								0.25,
+								0.71875,
+								0.1875,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 509619512047136,
+				"name": "ice_bolt",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8317600,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0.0625,
+								0.5,
+								0.125,
+								0.84375,
+								0.125,
+								0.90625,
+								0.5,
+								0.78125,
+								0.78125,
+								0.5,
+								0.78125,
+								0.0625,
+								0.90625,
+								0.125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 713636342554632,
+				"name": "lightning_bolt",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

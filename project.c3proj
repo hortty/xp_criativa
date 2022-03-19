@@ -16,8 +16,16 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Mosaico",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Keyboard",
+			"name": "Teclado",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -33,31 +41,7 @@
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Solid",
-			"author": "Scirra",
-			"version": "r285.3",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "bound",
-			"name": "Bound to layout",
-			"author": "Scirra",
-			"version": "r285.3",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "EightDir",
-			"name": "8 Direction",
-			"author": "Scirra",
-			"version": "r285.3",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "scrollto",
-			"name": "Scroll To",
+			"name": "Sólido",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -65,7 +49,7 @@
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Bullet",
+			"name": "Projétil",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -73,7 +57,7 @@
 		{
 			"type": "behavior",
 			"id": "NoSave",
-			"name": "No save",
+			"name": "Não salvar",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -81,7 +65,31 @@
 		{
 			"type": "behavior",
 			"id": "destroy",
-			"name": "Destroy outside layout",
+			"name": "Destruir fora do layout",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Restrito ao layout",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direções",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Centrar em",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -93,10 +101,9 @@
 			"Sprite",
 			"Sprite2",
 			"Sprite3",
-			"char_00",
 			"Teclado",
 			"Mouse",
-			"Sprite5"
+			"Sprite4"
 		],
 		"subfolders": [
 			{
@@ -106,6 +113,53 @@
 				],
 				"subfolders": [],
 				"name": "collisions"
+			},
+			{
+				"items": [
+					"Sprite5"
+				],
+				"subfolders": [],
+				"name": "enemy"
+			},
+			{
+				"items": [
+					"Mosaico",
+					"Mosaico2",
+					"Mosaico3",
+					"Mosaico4",
+					"Mosaico5",
+					"Mosaico6",
+					"Mosaico7",
+					"Mosaico8",
+					"Mosaico9"
+				],
+				"subfolders": [],
+				"name": "tileset"
+			},
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "hud"
+			},
+			{
+				"items": [
+					"char_00"
+				],
+				"subfolders": [
+					{
+						"items": [],
+						"subfolders": [],
+						"name": "weapons"
+					},
+					{
+						"items": [
+							"fire_bolt"
+						],
+						"subfolders": [],
+						"name": "skills"
+					}
+				],
+				"name": "character"
 			}
 		]
 	},
@@ -123,7 +177,8 @@
 	},
 	"eventSheets": {
 		"items": [
-			"Folha de eventos 1"
+			"Folha de eventos 1",
+			"Event sheet 1"
 		],
 		"subfolders": []
 	},
